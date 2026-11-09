@@ -38,6 +38,7 @@
 
 - [在线演示](https://skymail.ink)<br>
 - [部署文档](https://doc.skymail.ink)<br>
+- [私有部署变量与存储绑定](doc/deployment-bindings.md)<br>
 
 | ![](/doc/demo/demo1.png) | ![](/doc/demo/demo2.png) |
 |-----------------------|-----------------------|

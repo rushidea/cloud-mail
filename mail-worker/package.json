@@ -5,7 +5,8 @@
 	"scripts": {
 		"dev": "wrangler dev --config wrangler-dev.toml",
 		"test": "wrangler deploy --config wrangler-test.toml",
-		"deploy": "wrangler deploy",
+		"prepare:deploy": "node scripts/render-deploy-config.mjs",
+		"deploy": "node scripts/render-deploy-config.mjs && wrangler deploy --config wrangler.generated.toml",
 		"start": "wrangler dev"
 	},
 	"devDependencies": {
