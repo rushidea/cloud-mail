@@ -6,21 +6,27 @@ keep_vars = true
 [observability]
 enabled = true
 
-#[[d1_databases]]
-#binding = "db"			#d1数据库绑定名默认不可修改
-#database_name = ""		#d1数据库名字
-#database_id = ""		#d1数据库id
+# Generated at deploy time from private build variables. See doc/deployment-bindings.md.
+# Use `pnpm run deploy`; Wrangler does not expand these placeholders itself.
+[[d1_databases]]
+binding = "db"
+database_name = "${D1_DATABASE_NAME}"
+database_id = "${D1_DATABASE_ID}"
 
-#[[kv_namespaces]]
-#binding = "kv"			#kv绑定名默认不可修改
-#id = ""					#kv数据库id
+[[kv_namespaces]]
+binding = "kv"
+id = "${KV_NAMESPACE_ID}"
 
-#[[r2_buckets]]
-#binding = "r2"			#r2对象存储绑定名默认不可修改
-#bucket_name = ""		#r2对象存储桶的名字
+[[r2_buckets]]
+binding = "r2"
+bucket_name = "${R2_BUCKET_NAME}"
 
 #[[send_email]]
 #name = "email"			#CF发件, 配置后优先使用
+
+# Optional: enable only after approving the new external-forwarding capability.
+#[[send_email]]
+#name = "forward"
 
 [ai]
 binding = "ai"

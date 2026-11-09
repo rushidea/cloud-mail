@@ -11,7 +11,7 @@ custom_domain = true
 
 [[d1_databases]]
 binding = "db"
-database_name = "cloud-mail"
+database_name = "${D1_DATABASE_NAME}"
 database_id = "${D1_DATABASE_ID}"
 
 [[kv_namespaces]]
@@ -21,6 +21,10 @@ id = "${KV_NAMESPACE_ID}"
 [[r2_buckets]]
 binding = "r2"
 bucket_name = "${R2_BUCKET_NAME}"
+
+# Optional: enable only after approving the new external-forwarding capability.
+#[[send_email]]
+#name = "forward"
 
 [ai]
 binding = "ai"

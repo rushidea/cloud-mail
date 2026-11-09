@@ -26,3 +26,8 @@ mail-vue/dist
 .wrangler
 .venv
 git-tools.js
+
+# Private deployment inputs and generated configuration (never static assets).
+mail-worker/wrangler.generated.toml*
+mail-worker/.env*
+mail-worker/.dev.vars*
