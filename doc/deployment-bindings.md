@@ -73,6 +73,16 @@ It no longer finds or creates D1/KV resources by the Worker name, and a missing 
 input no longer removes the binding. Existing runtime setup requirements still
 apply. Do not make both CI systems production deployers unless that is intentional.
 
+## Upstream updates and optional email forwarding
+
+The optional `forward` email binding is disabled in the deployment templates.
+Enable it only when the owner has approved external forwarding and its destination
+restrictions. This does not disable the existing inbound email forwarding route.
+Before upgrading application code, review required database migrations and preserve
+a recovery point. Apply additive schema changes before sending traffic to code that
+requires them; do not assume an initialization endpoint returning success proves
+every migration completed.
+
 ## Local validation and generated files
 
 Export the required inputs in your local shell without committing them, then run

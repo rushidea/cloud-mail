@@ -24,6 +24,10 @@ bucket_name = "${R2_BUCKET_NAME}"
 #[[send_email]]
 #name = "email"			#CF发件, 配置后优先使用
 
+# Optional: enable only after approving the new external-forwarding capability.
+#[[send_email]]
+#name = "forward"
+
 [ai]
 binding = "ai"
 

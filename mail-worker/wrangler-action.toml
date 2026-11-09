@@ -22,6 +22,10 @@ id = "${KV_NAMESPACE_ID}"
 binding = "r2"
 bucket_name = "${R2_BUCKET_NAME}"
 
+# Optional: enable only after approving the new external-forwarding capability.
+#[[send_email]]
+#name = "forward"
+
 [ai]
 binding = "ai"
 
